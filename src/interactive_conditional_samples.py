@@ -54,7 +54,7 @@ def interact_model(
                 })[:, len(context_tokens):]
                 for i in range(batch_size):
                     generated += 1
-                    print("\n**Sample** " + str(generated) +"\n")
+                    print("\n**Sample " + str(generated) +"**\n")
                     text = enc.decode(out[i])
                     print("*" + prompt + "...*")
                     print(text)
@@ -64,13 +64,12 @@ def interact_model(
                      'the first day of the week is often either',
                      'the opposite of a clean plate is',
                      'the opposite of tall is',  
-                     'the opposite of happy is',
+                     'the opposite of cromulent is',
                      'a synonym for rare is',
-                     'a synonym for rustic is',
+                     'a synonym for cromulent is',
                      'in a dance battle between a hiphopapotamus and a rhymenocerous',
                      'the principle of entropy suggests an isomorphism between thermodynamics and',
-                     'under the garden wall',
-                     'a happy bird takes flight from']
+                     'the bird is happily']
         for p in queries:
             print('\n## ' + p)
             run_model(p)
