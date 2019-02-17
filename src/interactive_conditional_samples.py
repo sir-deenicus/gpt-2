@@ -64,22 +64,25 @@ def interact_model(
                      'the first day of the week is often either',
                      'the opposite of a clean plate is',
                      'the opposite of tall is',
-                     'the tall man ducked under',
-                     'You can rearrange the letters of 45 to get a phrase that reads',
+                     'the opposite of light is',
+                     'a synonym for rare is',
+                     'in a dance battle between a hiphopapotamus and a rhymenocerous'
+                     'the principle of entropy suggests an isomorphism between thermodynamics and'
+                     'under the garden wall'
                      'the opposite of happy is',
                      'a happy bird takes flight from']
         for p in queries:
             print('\n## ' + p)
             run_model(p)
-            print ('---\n')             
+            print ('\n---\n')             
         while True:
             raw_text = input("Model prompt >>> ")
             while not raw_text:
                 print('Prompt should not be empty!')
                 raw_text = input("Model prompt >>> ")
-            print('## ' + raw_text)
+            print('\n## ' + raw_text)
             run_model(raw_text)
-            print("---\n")
+            print("\n---\n")
 
 if __name__ == '__main__':
     fire.Fire(interact_model)
