@@ -54,7 +54,7 @@ def interact_model(
                 })[:, len(context_tokens):]
                 for i in range(batch_size):
                     generated += 1
-                    print("*Sample* " + generated)
+                    print("*Sample* " + str(generated))
                     text = enc.decode(out[i])
                     print("*" + prompt + "...*",end = ' ')
                     print(text)
