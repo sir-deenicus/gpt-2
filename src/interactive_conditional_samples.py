@@ -67,8 +67,8 @@ def interact_model(
                      'the opposite of cromulent is',
                      'a synonym for rare is',
                      'a synonym for cromulent is',
-                     'in a battle between a hiphopapotamus and a rhymenocerous',
-                     'the principle of entropy suggests an isomorphism between thermodynamics and information theory because' ]
+                     'a cypher for b-boys and b-girls will',
+                     'In order for a nuclear fusion device to be built, we need to discover ' ]
         for p in queries:
             print('\n## ' + p)
             run_model(p)
