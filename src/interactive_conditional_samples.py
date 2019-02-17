@@ -54,8 +54,9 @@ def interact_model(
                 })[:, len(context_tokens):]
                 for i in range(batch_size):
                     generated += 1
+                    print("*Sample* " + generated)
                     text = enc.decode(out[i])
-                    print("*" + prompt + "... *" )
+                    print("*" + prompt + "...*",end = ' ')
                     print(text)
         for p in ['it is well known that birds are direct descendants of','the tall man ducked under']:
             print('## ' + p)
