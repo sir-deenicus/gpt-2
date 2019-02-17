@@ -54,14 +54,24 @@ def interact_model(
                 })[:, len(context_tokens):]
                 for i in range(batch_size):
                     generated += 1
-                    print("*Sample* " + str(generated))
+                    print("\n**Sample** " + str(generated))
                     text = enc.decode(out[i])
-                    print("*" + prompt + "...*",end = ' ')
+                    print("*" + prompt + "...*")
                     print(text)
-        for p in ['it is well known that birds are direct descendants of','the tall man ducked under']:
-            print('## ' + p)
+        queries = [  'it is well known that birds are direct descendants of',
+                     'the zebra is chasing after the lion because',
+                     'the lion is chasing after the zebra because',
+                     'the first day of the week is often either',
+                     'the opposite of a clean plate is',
+                     'the opposite of tall is',
+                     'the tall man ducked under',
+                     'You can rearrange the letters of 45 to get a phrase that reads',
+                     'the opposite of happy is',
+                     'a happy bird takes flight from']
+        for p in queries:
+            print('\n## ' + p)
             run_model(p)
-            print ('---')             
+            print ('---\n')             
         while True:
             raw_text = input("Model prompt >>> ")
             while not raw_text:
@@ -69,7 +79,7 @@ def interact_model(
                 raw_text = input("Model prompt >>> ")
             print('## ' + raw_text)
             run_model(raw_text)
-            print("---")
+            print("---\n")
 
 if __name__ == '__main__':
     fire.Fire(interact_model)
