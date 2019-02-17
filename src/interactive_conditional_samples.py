@@ -58,7 +58,7 @@ def interact_model(
                     print("*" + prompt + "... *" )
                     print(text)
         for p in ['it is well known that birds are direct descendants of','the tall man ducked under']:
-            print('## ' + raw_text)
+            print('## ' + p)
             run_model(p)
             print ('---')             
         while True:
