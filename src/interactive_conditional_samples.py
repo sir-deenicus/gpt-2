@@ -57,12 +57,16 @@ def interact_model(
                     text = enc.decode(out[i])
                     print("*" + prompt + "... *" )
                     print(text)
-                    print('\n')
+        for p in ['it is well known that birds are direct descendants of','the tall man ducked under']:
+            print('## ' + raw_text)
+            run_model(p)
+            print ('---')             
         while True:
             raw_text = input("Model prompt >>> ")
             while not raw_text:
                 print('Prompt should not be empty!')
                 raw_text = input("Model prompt >>> ")
+            print('## ' + raw_text)
             run_model(raw_text)
             print("---")
 
