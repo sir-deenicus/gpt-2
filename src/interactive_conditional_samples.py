@@ -64,10 +64,10 @@ def interact_model(
                      'the first day of the week is often either',
                      'the opposite of a clean plate is',
                      'the opposite of tall is',  
-                     'the opposite of cromulent is',
                      'a synonym for rare is',
                      'a synonym for cromulent is',
                      'a cypher for b-boys and b-girls will',
+                     'Despite the similarity between information geometry and the differential geometry as applied in hamiltonian monte carlo, they are quite different because'
                      'In order for a nuclear fusion device to be built, we need to discover ' ]
         for p in queries:
             print('\n## ' + p)
