@@ -45,13 +45,8 @@ def interact_model(
         saver = tf.train.Saver()
         ckpt = tf.train.latest_checkpoint(os.path.join('models', model_name))
         saver.restore(sess, ckpt)
-
-        while True:
-            raw_text = input("Model prompt >>> ")
-            while not raw_text:
-                print('Prompt should not be empty!')
-                raw_text = input("Model prompt >>> ")
-            context_tokens = enc.encode(raw_text)
+        def run_model(prompt):
+            context_tokens = enc.encode(prompt)
             generated = 0
             for _ in range(nsamples // batch_size):
                 out = sess.run(output, feed_dict={
@@ -60,9 +55,16 @@ def interact_model(
                 for i in range(batch_size):
                     generated += 1
                     text = enc.decode(out[i])
-                    print("=" * 40 + " SAMPLE " + str(generated) + " " + "=" * 40)
+                    print("*" + prompt + "... *" )
                     print(text)
-            print("=" * 80)
+                    print('\n')
+        while True:
+            raw_text = input("Model prompt >>> ")
+            while not raw_text:
+                print('Prompt should not be empty!')
+                raw_text = input("Model prompt >>> ")
+            run_model(raw_text)
+            print("---")
 
 if __name__ == '__main__':
     fire.Fire(interact_model)
