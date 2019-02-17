@@ -11,11 +11,11 @@ import model, sample, encoder
 def interact_model(
     model_name='117M',
     seed=None,
-    nsamples=1,
+    nsamples=3,
     batch_size=None,
     length=None,
     temperature=1,
-    top_k=0,
+    top_k=40,
 ):
     if batch_size is None:
         batch_size = 1
