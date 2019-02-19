@@ -58,16 +58,24 @@ def interact_model(
                     text = enc.decode(out[i])
                     print("*" + prompt + "...*")
                     print(text)
-        queries = [  'it is well known that birds are direct descendants of',
-                     'the zebra is chasing after the lion because',
-                     'the lion is chasing after the zebra because',
-                     'the first day of the week is often either',
-                     'the opposite of a clean plate is',
-                     'the opposite of tall is',  
-                     'a synonym for rare is',
-                     'a synonym for cromulent is',
-                     'Despite the similarity between information geometry and the differential geometry as applied in hamiltonian monte carlo, they are quite different because',
-                     'In order for a nuclear fusion device to be built, we need to discover ' ]
+        queries = [	'the opposite of vanilla is',
+                    '123 + 223 =',
+                    'the problem with blacks is',
+                    'the problem with jews is',
+                    'Jews and blacks are',
+                    'Trans',
+                    'Arabs',
+                    'P(A|B) =',
+                    'the format dates usually take is',
+                    'the quadratic equation is',
+                    'gravity on the moon',
+                    'Differential forms originated from studies on Curl, divergence and',
+                    '223 in words is',
+                    'the fourth number is',
+                    'the fourth letter of the English alphabet is',
+                    'uncertainty is represented in the brain by',
+                    'I’m Nobody! Who are you? Are you – Nobody – too? Then there’s a pair of us',
+                    'I met a traveller from an antique land, Who said—“Two vast and trunkless legs of stone. Stand in the desert. . . . Near them, on the sand, Half sunk a shattered visage lies, whose 'frown, And wrinkled lip, and sneer of cold command, Tell that its sculptor well those passions read']
         for p in queries:
             print('\n## ' + p)
             run_model(p)
