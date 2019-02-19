@@ -58,7 +58,8 @@ def interact_model(
                     text = enc.decode(out[i])
                     print("*" + prompt + "...*")
                     print(text)
-        queries = [	'the opposite of vanilla is',
+        queries = [	
+                    'the opposite of vanilla is',
                     '123 + 223 =',
                     'the problem with blacks is',
                     'the problem with jews is',
@@ -75,7 +76,7 @@ def interact_model(
                     'the fourth letter of the English alphabet is',
                     'uncertainty is represented in the brain by',
                     'I’m Nobody! Who are you? Are you – Nobody – too? Then there’s a pair of us',
-                    'I met a traveller from an antique land, Who said—“Two vast and trunkless legs of stone. Stand in the desert. . . . Near them, on the sand, Half sunk a shattered visage lies, whose 'frown, And wrinkled lip, and sneer of cold command, Tell that its sculptor well those passions read']
+                    'I met a traveller from an antique land, Who said—“Two vast and trunkless legs of stone. Stand in the desert. . . . Near them, on the sand, Half sunk a shattered visage lies, whose frown, And wrinkled lip, and sneer of cold command, Tell that its sculptor well those passions read']
         for p in queries:
             print('\n## ' + p)
             run_model(p)
