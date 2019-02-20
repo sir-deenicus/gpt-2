@@ -75,7 +75,7 @@ def interact_model(
                     'the sixth letter of the English alphabet is',
                     'uncertainty is represented in the brain by',
                     'I’m Nobody! Who are you? Are you – Nobody – too? Then there’s a pair of us',
-                    'Dio mio! Où est mon omelette au fromage?'
+                    'Dio mio! Où est mon omelette au fromage?',
                     'je vontren le voyager a la supermarché']
         for p in queries:
             print('\n## ' + p)
